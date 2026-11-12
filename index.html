@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>User Registration</title>
+    </head>
+    <body>
+        <form id="regform">
+            <label for="fullname">Full Name</label><br>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br><br><br>
+            <input type="submit" value="register">
+            <br><br>
+        </form>
+        <div id="msg" style="display:none">
+            <p>Successfully Registered!</p>
+        </div>
+
+        <script>
+            document.getElementById("regform").addEventListener("submit",function(event){
+                event.preventDefault()
+                document.getElementById("msg").style.display="block"
+                document.getElementById("regform").reset()
+            })
+        </script>
+    </body>
+</html>
